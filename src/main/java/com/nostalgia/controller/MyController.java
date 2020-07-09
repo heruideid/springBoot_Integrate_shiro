@@ -27,9 +27,6 @@ public class MyController {
             subject.login(token);
             Account account=(Account)subject.getPrincipal();
             subject.getSession().setAttribute("account",account);
-            System.out.println(account.getPerm());
-            System.out.println(account.getRole());
-            System.out.println("-----------");
             return "index";
         }catch (UnknownAccountException e){
             e.printStackTrace();
@@ -45,7 +42,6 @@ public class MyController {
 
     @GetMapping("/{url}")
     public String redirect(@PathVariable  String url){
-        System.out.println(1);
         return url;
     }
 

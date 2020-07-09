@@ -32,7 +32,6 @@ public class AccountRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken token=(UsernamePasswordToken)authenticationToken;
-        //System.out.println(token.getUsername());
         Account account=accountService.findByUserName(token.getUsername());
         if(account!=null){
             return new SimpleAuthenticationInfo(account,account.getPassword(),getName());

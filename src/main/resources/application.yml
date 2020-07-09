@@ -3,7 +3,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/shiroaccount?serverTimezone=GMT
     username: root
-    password: herui15823439009
+    password: 123
     driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
     prefix: classpath:/templates/
